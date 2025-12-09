@@ -1,0 +1,11 @@
+opencv-python
+opencv-contrib-python
+langchain
+langchain-openai
+langchain_google_genai
+langchain-community
+python-dotenv
+sounddevice
+soundfile
+SpeechRecognition
+SpeechRecognition[whisper-local]
