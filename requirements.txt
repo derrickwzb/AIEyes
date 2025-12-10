@@ -6,6 +6,8 @@ langchain_google_genai
 langchain-community
 python-dotenv
 sounddevice
+pyaudio
+piper-tts
 soundfile
 SpeechRecognition
 SpeechRecognition[whisper-local]
