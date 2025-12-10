@@ -11,6 +11,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from speech_recognition import Microphone, Recognizer, UnknownValueError
+from langchain_groq import ChatGroq
 
 
 load_dotenv()
@@ -35,7 +36,8 @@ def audio_callback(recognizer, audio):
 # wc_stream.stop()
 # cv2.destroyAllWindows()
 
-model = ChatGoogleGenerativeAI(model= "gemini-2.5-flash")
+# model = ChatGoogleGenerativeAI(model= "gemini-2.5-flash")
+model = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0.7)
 
 assistant = Assistant(model)
 

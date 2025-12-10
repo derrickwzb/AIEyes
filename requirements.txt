@@ -3,6 +3,7 @@ opencv-contrib-python
 langchain
 langchain-openai
 langchain_google_genai
+langchain_groq
 langchain-community
 python-dotenv
 sounddevice
