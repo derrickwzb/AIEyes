@@ -12,3 +12,7 @@ piper-tts
 soundfile
 SpeechRecognition
 SpeechRecognition[whisper-local]
+fastapi
+uvicorn
+fastapi[all]
+ffmpeg-python

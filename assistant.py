@@ -30,6 +30,15 @@ class Assistant:
         if response:
             self._tts(response)
 
+    def answer_backend(self, prompt, image_base64):
+        response = self.chain.invoke(
+            {"prompt": prompt, "image_base64": image_base64 or ""},
+            config={"configurable": {"session_id": "unused"}},
+        ).strip()
+
+        print("LLM Response:", response)
+        return response
+
     def _tts(self, response):
         sample_rate = self.piper_model.config.sample_rate
         player = PyAudio().open(format=paInt16, channels=1, rate=sample_rate, output=True)
